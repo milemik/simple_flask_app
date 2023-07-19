@@ -2,6 +2,9 @@ import os
 
 from flask import Flask, render_template
 
+HOST = os.getenv("HOST", "127.0.0.1")
+PORT = os.getenv("PORT", 5000)
+
 app = Flask(__name__)
 
 
@@ -11,4 +14,4 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run(debug=os.getenv("DEBUG"))
+    app.run(debug=os.getenv("DEBUG"), host=HOST, port=PORT)

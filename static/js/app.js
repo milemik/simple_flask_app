@@ -1,1 +1,1 @@
-alert("HEllo");
+alert("Hello JS static file is working fine!");
